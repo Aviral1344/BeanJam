@@ -13,17 +13,37 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #0171d3;
+    justify-content: right;
+    padding-right: 150px;
+    background-image: linear-gradient(rgb(110, 14, 110), rgb(73, 91, 193))
 }
 
 .form
 {
+    position: absolute;
     max-width: 430px;
     width: 100%;
     padding: 35px;
     border-radius: 10px;
     background: #fff;
+}
+
+.form.signup
+{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.forms.show-signup .form.signup
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forms.show-signup .form.login
+{
+    opacity: 0;
+    pointer-events: none;
 }
 
 header
@@ -77,22 +97,22 @@ form
 
 .field button
 {
-    background-color: #0171d3;
-    color: #fff;
+    background-color: rgb(73, 91, 193);
+    color: #ffffff;
     height: 100%;
     width : 100%;
     font-size: 18px;
     font-weight: 500;
     border: 0px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     cursor: pointer;
 }
 
 .field button:hover
 {
-    color: #0171d3;
-    background-color:aliceblue;
+    color: #ffffff;
+    background-image: linear-gradient(rgb(73, 91, 193), rgb(110, 14, 110));
 }
 
 .form-link
@@ -191,5 +211,11 @@ a.google span
 
 }
 
-
+@media screen and (max-width: 400px)
+{
+    .form
+    {
+        padding: 15px 10px;
+    }
+}
 
