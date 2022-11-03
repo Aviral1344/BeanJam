@@ -16,7 +16,7 @@
                 <form action="#">
 
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="email" placeholder="Email"  class="input">
                     </div>
 
                     <div class="field input-field">
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="field button-field">
-                        <button>Login</button>
+                        <button id="logbtn">Login</button>
                     </div>
 
                     <div class="form-link">
@@ -51,22 +51,20 @@
                 <form action="#">
 
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="email" placeholder="Email" id="email" class="input">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" placeholder="Password" id="pwd" class="password">
                         <i class='bx bxs-hide eye-icon'></i>
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Confirm Password" class="password">
-                        
+                        <input type="password" placeholder="Confirm Password" id="pwd2" class="password">
                     </div>
-
-
+                    
                     <div class="field button-field">
-                        <button>Signup</button>
+                        <button id="Sigbtn">Signup</button>
                     </div>
 
                     <div class="form-link">
@@ -83,6 +81,57 @@
             </div>
             
         </section>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from  "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = 
+        {     
+            apiKey: "AIzaSyB2MmNbTTTHEhuJ0DMMjMFO8lGpelwOB_4",
+            authDomain: "beanjam-7a98e.firebaseapp.com",
+            projectId: "beanjam-7a98e",
+            storageBucket: "beanjam-7a98e.appspot.com",
+            messagingSenderId: "361212926453",
+            appId: "1:361212926453:web:a0c057737022028f8228bc"
+        };
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        sigbtn.addEventListener("click", e=>
+        {
+            var email= document.getElementById("email").value;
+            var password= document.getElementById("pwd").value;
+            var password2= document.getElementById("pwd2").value;
+            if(password == password2)
+            {
+                createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => 
+                {
+                    // Signed in 
+                    const user = userCredential.user;
+                    // ...
+                    alert("user created successfully");
+                })
+                .catch((error) => 
+                {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+                    alert(errorMessage);
+                })
+            }
+
+            else
+            {
+                alert("passwords dont match");
+            }
+        })
+    </script>
 
     <script src="script.js"></script>
     </body>
