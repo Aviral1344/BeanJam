@@ -7,6 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+ul
+{
+    list-style-type: none;
+}
+
+
+
 .container
 {
     height: 100vh;
@@ -17,6 +24,15 @@
     padding-right: 150px;
     background-image: linear-gradient(rgb(110, 14, 110), rgb(73, 91, 193))
 }
+
+.logo
+{
+    position: absolute;
+    left: 150px;
+    top: 110px;
+}
+
+
 
 .form
 {
