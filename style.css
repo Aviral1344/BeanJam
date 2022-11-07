@@ -12,6 +12,23 @@ ul
     list-style-type: none;
 }
 
+.login-link
+{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+}
+
+.login-link a
+{
+    text-decoration: none;
+}
+
+.login-link a:hover
+{
+    text-decoration: none;
+}
 
 
 .container
@@ -31,7 +48,6 @@ ul
     left: 150px;
     top: 110px;
 }
-
 
 
 .form
