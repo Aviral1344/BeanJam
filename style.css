@@ -5,40 +5,74 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    list-style: none;
 }
 
-ul
+.transition-fade
 {
-    list-style-type: none;
+    opacity: 1;
+    transition: 1s;
 }
 
-.login-link
+html.is-animating.transition-fade
+{
+    opacity: 0;
+}
+
+nav
 {
     position: absolute;
-    top: 25px;
-    right: 50px;
-    box-sizing: border-box;
-    border: 1px solid white;
-    width: 70px;
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    
-
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    width: 100%;
+    border: 0px;
 }
 
-.login-link a
+
+label.logo
 {
-    text-decoration: none;
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    font-weight: 600;
     color: #ffffff;
-     font-size: 18px;
+    font-size: 35px;
 }
 
-.login-link a:hover
+nav ul
 {
-    text-decoration: none;
+    float: right;
+    margin-right: 20px;
 }
 
+nav ul li
+{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 16px;
+}
+
+nav ul li a
+{
+    color: #ffffff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.current a
+{
+    background-color: rgb(110, 14, 110);
+}
+
+nav ul li a:hover
+{
+    background-color: rgb(73, 91, 193);
+    transition: 0.5s;
+}
 
 .container
 {
@@ -64,7 +98,7 @@ ul
     position: absolute;
     max-width: 430px;
     width: 100%;
-    padding: 35px;
+    padding: 20px;
     border-radius: 10px;
     background: #fff;
 }
