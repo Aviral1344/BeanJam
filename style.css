@@ -16,13 +16,22 @@ ul
 {
     position: absolute;
     top: 25px;
-    right: 25px;
+    right: 50px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    width: 70px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    
 
 }
 
 .login-link a
 {
     text-decoration: none;
+    color: #ffffff;
+     font-size: 18px;
 }
 
 .login-link a:hover
