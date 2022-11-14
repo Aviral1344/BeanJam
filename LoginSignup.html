@@ -17,136 +17,128 @@
                 <li><a class="current" href="LoginSignup.html">Login</a></li>
             </ul>
         </nav>
-        <main id="swup" class="transistion-fade">         
-        <section class="container forms">
-
-            <div>
-                <img src="logo.png" class="logo" height="500">
-            </div> 
-            <div class="form login">
-                <header>Login</header>
-                <form action="#">
-
-                    <div class="field input-field">
-                        <input type="email" placeholder="Email"  class="input">
-                    </div>
-
-                    <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password">
-                        <i class='bx bxs-hide eye-icon'></i>
-                    </div>
-
-                    <div class="form-link">
-                        <span><a href="#" class="forgot-pass">Forgot password?</a></span>
-                    </div>
-
-                    <div class="field button-field">
-                        <button id="logbtn">Login</button>
-                    </div>
-
-                    <div class="form-link">
-                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
-                    </div> 
-                </form>
-                <div class= "line"></div>
-                <div class="media-options">
-                    <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Login with Facebook</span></a>
-                
-                    <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Login with Google</span></a>
-                </div>
-
-            </div>
-
-
-            <div class="form signup">
-                <header>Signup</header>
-                <form action="#">
-
-                    <div class="field input-field">
-                        <input type="email" placeholder="Email" id="email" class="input">
-                    </div>
-
-                    <div class="field input-field">
-                        <input type="password" placeholder="Password" id="pwd" class="password">
-                        <i class='bx bxs-hide eye-icon'></i>
-                    </div>
-
-                    <div class="field input-field">
-                        <input type="password" placeholder="Confirm Password" id="pwd2" class="password">
-                    </div>
-                    
-                    <div class="field button-field">
-                        <button id="Sigbtn">Signup</button>
-                    </div>
-
-                    <div class="form-link">
-                        <span>Already have an account? <a href="#" class="link signup-link">Login</a></span>
-                    </div> 
-                </form>
-                <div class= "line"></div>
-                <div class="media-options">
-                    <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Signup with Facebook</span></a>
-                
-                    <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Signup with Google</span></a>
-                </div>
-
-            </div>
-            
-        </section>
-        </main>
+        <main id="swup" class="transistion-fade">
+            <section class="container forms">
+                <div>
+                    <img src="logo.png" class="logo" height="500">
+                </div> 
+                <div class="form login">
+                    <header>Login</header>
+                    <form action="#">
     
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword } from  "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email"  class="input">
+                        </div>
+    
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" class="password">
+                            <i class='bx bxs-hide eye-icon'></i>
+                        </div>
+    
+                        <div class="form-link">
+                            <span><a href="#" class="forgot-pass">Forgot password?</a></span>
+                        </div>
+    
+                        <div class="field button-field">
+                            <button id="logbtn">Login</button>
+                        </div>
+    
+                        <div class="form-link">
+                            <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                        </div> 
+                    </form>
+                    <div class= "line"></div>
+                    <div class="media-options">
+                        <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Login with Facebook</span></a>
+                    
+                        <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Login with Google</span></a>
+                    </div>
+    
+                </div>
+    
+    
+                <div class="form signup">
+                    <header>Signup</header>
+                    <form action="#">
+    
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" id="emailS" class="input">
+                        </div>
+    
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" id="pwdS" class="password">
+                            <i class='bx bxs-hide eye-icon'></i>
+                        </div>
+    
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirm Password" id="pwdS2" class="password">
+                        </div>
+                        
+                        <div class="field button-field">
+                            <button id="Sigbtn">Signup</button>
+                        </div>
+    
+                        <div class="form-link">
+                            <span>Already have an account? <a href="#" class="link signup-link">Login</a></span>
+                        </div> 
+                    </form>
+                    <div class= "line"></div>
+                    <div class="media-options">
+                        <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Signup with Facebook</span></a>
+                    
+                        <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Signup with Google</span></a>
+                    </div>
+    
+                </div>
+            </section>
+        </main>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            import { getDatabase } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+            import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyB2MmNbTTTHEhuJ0DMMjMFO8lGpelwOB_4",
+              authDomain: "beanjam-7a98e.firebaseapp.com",
+              databaseURL: "https://beanjam-7a98e-default-rtdb.firebaseio.com",
+              projectId: "beanjam-7a98e",
+              storageBucket: "beanjam-7a98e.appspot.com",
+              messagingSenderId: "361212926453",
+              appId: "1:361212926453:web:a0c057737022028f8228bc"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const database = getDatabase(app);
+            const auth = getAuth();
 
-        // Your web app's Firebase configuration
-        const firebaseConfig = 
-        {     
-            apiKey: "AIzaSyB2MmNbTTTHEhuJ0DMMjMFO8lGpelwOB_4",
-            authDomain: "beanjam-7a98e.firebaseapp.com",
-            projectId: "beanjam-7a98e",
-            storageBucket: "beanjam-7a98e.appspot.com",
-            messagingSenderId: "361212926453",
-            appId: "1:361212926453:web:a0c057737022028f8228bc"
-        };
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
+            sigbtn.addEventListner('click',(e) => {
 
-        sigbtn.addEventListener("click", e=>
-        {
-            var email= document.getElementById("email").value;
-            var password= document.getElementById("pwd").value;
-            var password2= document.getElementById("pwd2").value;
-            if(password == password2)
-            {
+                var email= document.getElementById(emailS).value
+                var password= document.getElementById(pwdS).value
+
                 createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => 
-                {
+                .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
+                    alert('user created!');
                     // ...
-                    alert("user created successfully");
                 })
-                .catch((error) => 
-                {
+                .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     // ..
                     alert(errorMessage);
-                })
-            }
+                });
 
-            else
-            {
-                alert("passwords dont match");
-            }
-        })
-    </script>
+            })
+        </script>
 
-    <script src="C:\Users\avira\OneDrive\Documents\GitHub\BeanJam\node_modules\swup\dist\swup.min.js"></script>
+    <script src="node_modules\swup\dist\swup.min.js"></script>
     <script src="script.js"></script>
 
     </body>

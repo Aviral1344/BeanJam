@@ -14,7 +14,7 @@
     transition: 1s;
 }
 
-html.is-animating.transition-fade
+html.is-animating .transition-fade
 {
     opacity: 0;
 }
@@ -85,11 +85,18 @@ nav ul li a:hover
     background-image: linear-gradient(rgb(110, 14, 110), rgb(73, 91, 193))
 }
 
+.homelogo
+{
+    position: absolute;
+    top: 110px;
+    left: 450px;
+}
+
 .logo
 {
     position: absolute;
-    left: 150px;
     top: 110px;
+    left: 150px;
 }
 
 

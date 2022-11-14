@@ -1,6 +1,4 @@
-
-import Swup from 'swup';
-const swup = new Swup();
+const swup = new Swup()
 
 const forms= document.querySelector(".forms"),
     pwShowHide= document.querySelectorAll(".eye-icon"),
