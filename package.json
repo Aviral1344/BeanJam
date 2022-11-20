@@ -1,0 +1,26 @@
+{
+  "name": "beanjam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "typed-query-selector": "^2.8.0",
+    "delegate-it": "^3.0.1",
+    "opencollective-postinstall": "^2.0.3",
+    "swup": "^2.0.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aviral1344/BeanJam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aviral1344/BeanJam/issues"
+  },
+  "homepage": "https://github.com/Aviral1344/BeanJam#readme"
+}
