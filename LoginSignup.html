@@ -10,18 +10,22 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--bixicons icon import -->
     </head>
     <body>
-        <nav>
-            <label class="logo">BeanJAM</label>
-            <ul>
-                <li><a  href="home.html">Home</a></li>
-                <li><a class="current" href="LoginSignup.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <h1>BeanJAM</h1>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+            <a class="bruh" href="LoginSignup.html"><button>LOGIN/SIGNUP</button></a>
+        </div>
+        
         <main id="swup" class="transistion-fade">
             <section class="container forms">
-                <div>
-                    <img src="logo.png" class="logo" height="500">
-                </div> 
+
                 <div class="form login">
                     <header>Login</header>
                     <form action="#">
@@ -69,11 +73,11 @@
                             <input type="password" placeholder="Password" id="pwdS" class="password">
                             <i class='bx bxs-hide eye-icon'></i>
                         </div>
-    
-                        <div class="field input-field">
-                            <input type="password" placeholder="Confirm Password" id="pwdS2" class="password">
+
+                        <div class="form-link">
+                            <span><a href="#" class="forgot-pass" >&nbsp</a></span>
                         </div>
-                        
+
                         <div class="field button-field">
                             <button id="Sigbtn">Signup</button>
                         </div>
