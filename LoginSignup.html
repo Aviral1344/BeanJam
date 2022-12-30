@@ -29,11 +29,11 @@
                 <form action="#">
 
                     <div class="field input-field">
-                        <input type="email" placeholder="Email"  class="input">
+                        <input type="email" placeholder="Email"  class="input" id="emailL">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" placeholder="Password" class="password" id="PwdL">
                         <i class='bx bxs-hide eye-icon'></i>
                     </div>
 
@@ -64,6 +64,10 @@
                 <form action="#">
 
                     <div class="field input-field">
+                        <input type="text" placeholder="Full name" id="name" class="input">
+                    </div>
+
+                    <div class="field input-field">
                         <input type="email" placeholder="Email" id="emailS" class="input">
                     </div>
 
@@ -77,7 +81,7 @@
                     </div>
 
                     <div class="field button-field">
-                        <button id="Sigbtn">Signup</button>
+                        <button onclick="signup()">Signup</button>
                     </div>
 
                     <div class="form-link">
@@ -93,7 +97,10 @@
 
             </div>
         </section>
-    <script src="script.js"></script>
+        <script type="module" src=""https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js""></script>
+        <script type="module" src=""https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js""></script>
+        <script type="module" src=""https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js""></script>
+        <script src="script.js"></script>
 
     </body>
 
