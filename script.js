@@ -33,6 +33,7 @@ links.forEach(link =>
         })
     })
 
+document.getElementById("signup_button").addEventListener("click", signup);
 
 var firebaseConfig = {
     apiKey: "AIzaSyB2MmNbTTTHEhuJ0DMMjMFO8lGpelwOB_4",
@@ -47,24 +48,25 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
 const database = firebase.database()
-    
+
+
 //Signup function
 function signup(){
-    email= document.getElementById('emailS').value;
-    password= document.getElementById('pwdS').value;
-    Uname= document.getElementById('name').value;
+    var email= document.getElementById("emailS").value;
+    var password= document.getElementById("pwdS").value;
+    var Uname= document.getElementById("full_name").value;
 
-    if(validate_email(email)==flase){
+    if(validate_email(email)==false){
         alert("Invalid Email Id")
         return
     }
 
     if(validate_password(password)==false){
-            alert("Pasword should be 6 charecters or longer")
-            return
-        }
+        alert("Pasword should be 8 charecters or longer")
+        return
+    }
 
-    if(validate_field(email)==flase || validate_field(password)==false){
+    if(validate_field(email)==false || validate_field(password)==false || validate_field(Uname)==false){
         alert("One or more fields are empty")
         return
     }
@@ -86,14 +88,13 @@ function signup(){
         })
 
     .catch(function(error){
-        var error_code= error.code
         var error_message= error.message
         alert(error_message)
     })
 }
 
 function validate_email(email){
-    expression = /^[^@]+@\w+(\.\w+)+\w$/.test(str);
+    var expression = /^[^@]+@\w+(\.\w+)+\w$/
     if (expression.test(email)== true){
         return true;
     }
@@ -103,7 +104,7 @@ function validate_email(email){
 }
 
 function validate_password(password){
-    if(password<8){
+    if(password.length<8){
         return false;
     }
     else{
@@ -123,3 +124,4 @@ function validate_field(field){
         return true
     }
 }
+
