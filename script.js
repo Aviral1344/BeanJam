@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import {initializeApp} from 'firebase/app';
 
 const forms= document.querySelector(".forms"),
     pwShowHide= document.querySelectorAll(".eye-icon"),
