@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width= device-width, initial-scale=1.0">
         <title>Login/Signup</title>
-        
         <link rel="stylesheet" href="style.css"><!-- CSS import-->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--bixicons icon import -->
     </head>
@@ -23,126 +22,77 @@
             <a class="bruh" href="LoginSignup.html"><button>LOGIN/SIGNUP</button></a>
         </div>
         
-        <main id="swup" class="transistion-fade">
-            <section class="container forms">
+        <section class="container forms">
 
-                <div class="form login">
-                    <header>Login</header>
-                    <form action="#">
-    
-                        <div class="field input-field">
-                            <input type="email" placeholder="Email"  class="input">
-                        </div>
-    
-                        <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
-                            <i class='bx bxs-hide eye-icon'></i>
-                        </div>
-    
-                        <div class="form-link">
-                            <span><a href="#" class="forgot-pass">Forgot password?</a></span>
-                        </div>
-    
-                        <div class="field button-field">
-                            <button id="logbtn">Login</button>
-                        </div>
-    
-                        <div class="form-link">
-                            <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
-                        </div> 
-                    </form>
-                    <div class= "line"></div>
-                    <div class="media-options">
-                        <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Login with Facebook</span></a>
-                    
-                        <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Login with Google</span></a>
+            <div class="form login">
+                <header>Login</header>
+                <form action="#">
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email"  class="input">
                     </div>
-    
-                </div>
-    
-    
-                <div class="form signup">
-                    <header>Signup</header>
-                    <form action="#">
-    
-                        <div class="field input-field">
-                            <input type="email" placeholder="Email" id="emailS" class="input">
-                        </div>
-    
-                        <div class="field input-field">
-                            <input type="password" placeholder="Password" id="pwdS" class="password">
-                            <i class='bx bxs-hide eye-icon'></i>
-                        </div>
 
-                        <div class="form-link">
-                            <span><a href="#" class="forgot-pass" >&nbsp</a></span>
-                        </div>
-
-                        <div class="field button-field">
-                            <button id="Sigbtn">Signup</button>
-                        </div>
-    
-                        <div class="form-link">
-                            <span>Already have an account? <a href="#" class="link signup-link">Login</a></span>
-                        </div> 
-                    </form>
-                    <div class= "line"></div>
-                    <div class="media-options">
-                        <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Signup with Facebook</span></a>
-                    
-                        <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Signup with Google</span></a>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password">
+                        <i class='bx bxs-hide eye-icon'></i>
                     </div>
-    
+
+                    <div class="form-link">
+                        <span><a href="#" class="forgot-pass">Forgot password?</a></span>
+                    </div>
+
+                    <div class="field button-field">
+                        <button id="logbtn">Login</button>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div> 
+                </form>
+                <div class= "line"></div>
+                <div class="media-options">
+                    <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Login with Facebook</span></a>
+                
+                    <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Login with Google</span></a>
                 </div>
-            </section>
-        </main>
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-            import { getDatabase } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
-            import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-              apiKey: "AIzaSyB2MmNbTTTHEhuJ0DMMjMFO8lGpelwOB_4",
-              authDomain: "beanjam-7a98e.firebaseapp.com",
-              databaseURL: "https://beanjam-7a98e-default-rtdb.firebaseio.com",
-              projectId: "beanjam-7a98e",
-              storageBucket: "beanjam-7a98e.appspot.com",
-              messagingSenderId: "361212926453",
-              appId: "1:361212926453:web:a0c057737022028f8228bc"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const database = getDatabase(app);
-            const auth = getAuth();
 
-            sigbtn.addEventListner('click',(e) => {
+            </div>
 
-                var email= document.getElementById(emailS).value
-                var password= document.getElementById(pwdS).value
 
-                createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in 
-                    const user = userCredential.user;
-                    alert('user created!');
-                    // ...
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    // ..
-                    alert(errorMessage);
-                });
+            <div class="form signup">
+                <header>Signup</header>
+                <form action="#">
 
-            })
-        </script>
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" id="emailS" class="input">
+                    </div>
 
-    <script src="node_modules\swup\dist\swup.min.js"></script>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" id="pwdS" class="password">
+                        <i class='bx bxs-hide eye-icon'></i>
+                    </div>
+
+                    <div class="form-link">
+                        <span><a href="#" class="forgot-pass" >&nbsp</a></span>
+                    </div>
+
+                    <div class="field button-field">
+                        <button id="Sigbtn">Signup</button>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link signup-link">Login</a></span>
+                    </div> 
+                </form>
+                <div class= "line"></div>
+                <div class="media-options">
+                    <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Signup with Facebook</span></a>
+                
+                    <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Signup with Google</span></a>
+                </div>
+
+            </div>
+        </section>
     <script src="script.js"></script>
 
     </body>
