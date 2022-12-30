@@ -1,4 +1,4 @@
-const swup = new Swup()
+import firebase from 'firebase';
 
 const forms= document.querySelector(".forms"),
     pwShowHide= document.querySelectorAll(".eye-icon"),
@@ -19,7 +19,7 @@ pwShowHide.forEach(eyeIcon =>
                 password.type = "password";
                 eyeIcon.classList.replace("bxs-show", "bxs-hide");
             })
-
+ 
         })
     })
 
