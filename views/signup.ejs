@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <title>BeanJAM- SignUp</title>
+        <link rel="stylesheet" href="/stylesheets/style.css"><!-- CSS import-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--bixicons icon import -->
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>BeanJAM</h1>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+            <a class="bruh" href="/login"><button>LOGIN/SIGNUP</button></a>
+        </div>
+        
+        <section class="container forms">
+            <div class="form login">
+                <header>Signup</header>
+                <form action="/signup" method="POST">
+
+                    <div class="field input-field">
+                        <input placeholder="Full name" id="full_name" class="input" name="full_name">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" id="emailS" class="input" name="email" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" id="pwdS" class="password" name="password" required>
+                        <i class='bx bxs-hide eye-icon'></i>
+                    </div>
+
+                    <div class="form-link">
+                        <span><a href="#" class="forgot-pass" >&nbsp</a></span>
+                    </div>
+
+                    <div class="field button-field">
+                        <button id="signup_button">Signup</button>
+                    </div>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="/login" class="link signup-link">Login</a></span>
+                    </div> 
+                </form>
+                <div class= "line"></div>
+                <div class="media-options">
+                    <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Signup with Facebook</span></a>
+                
+                    <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Signup with Google</span></a>
+                </div>
+
+            </div>
+        </section>
+        <script src="/javascripts/script.js"></script>
+
+    </body>
+
+</html>
