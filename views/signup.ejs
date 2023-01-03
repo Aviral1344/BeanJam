@@ -28,6 +28,10 @@
                 <form action="/signup" method="POST">
 
                     <div class="field input-field">
+                        <input placeholder="Username" id="full_name" class="input" name="user_name">
+                    </div>
+
+                    <div class="field input-field">
                         <input placeholder="Full name" id="full_name" class="input" name="full_name">
                     </div>
 
@@ -40,10 +44,6 @@
                         <i class='bx bxs-hide eye-icon'></i>
                     </div>
 
-                    <div class="form-link">
-                        <span><a href="#" class="forgot-pass" >&nbsp</a></span>
-                    </div>
-
                     <div class="field button-field">
                         <button id="signup_button">Signup</button>
                     </div>
@@ -51,13 +51,20 @@
                     <div class="form-link">
                         <span>Already have an account? <a href="/login" class="link signup-link">Login</a></span>
                     </div> 
+                    
                 </form>
-                <div class= "line"></div>
-                <div class="media-options">
-                    <a href="#" class="field facebook"><i class='bx bxl-facebook-circle fb-icon' ></i><span>Signup with Facebook</span></a>
-                
-                    <a href="#" class="field google"><i class='bx bxl-google g-icon' ></i><span>Signup with Google</span></a>
+                <div class="bottom">
+                    <div class= "line"></div>
+                    <div class="media-options provider">
+                        <button class="field facebook">
+                            <a href="#" ><i class='bx bxl-facebook-circle bx-sm icons' ></i><span>Login with Facebook</span></a>
+                        </button>
+                        <button class="field google">
+                            <a href="#"><i class='bx bxl-google bx-sm icons' ></i><span>Login with Google</span></a>
+                        </button>
+                    </div>
                 </div>
+                
 
             </div>
         </section>

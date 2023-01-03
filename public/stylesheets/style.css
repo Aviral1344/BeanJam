@@ -104,6 +104,7 @@ html.is-animating .transition-fade
 .form
 {
     position: absolute;
+    height : 630px;
     max-width: 430px;
     width: 100%;
     padding: 20px;
@@ -111,6 +112,7 @@ html.is-animating .transition-fade
     border-radius: 10px;
     background: #fff;
 }
+
 
 .form.signup
 {
@@ -140,6 +142,7 @@ header
 form
 {
     margin-top: 30px;
+    height: 320px;
 }
 
 .form .field
@@ -147,7 +150,7 @@ form
     position: relative;
     height: 50px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 14px;
     border-radius: 10px;
 }
 
@@ -198,14 +201,31 @@ form
     background-color: #0088a9;
 }
 
+.form-link0{
+    position: absolute;
+    margin-top: 5px;
+}
+
 .form-link
 {
-    text-align: center;
+    position: absolute;
+    bottom: 190px;
+    align-items: center;
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
     color: #0088a9;
     
+}
+
+.field.button-field{
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 430px;
+    width: 100%;
+    left: 0px;
+    bottom: 225px;
 }
  
 .form a
@@ -219,12 +239,24 @@ form
     text-decoration: underline;
 }
 
+.bottom{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    left: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    bottom: 10px;
+}
+
 .line
 {
     position: relative;
     height: 1px;
     width: 100%;
-    margin: 36px 0;
+    margin: 20px 0;
+    margin-bottom: 20px;
     background-color: #d4d4d4;
 }
 
@@ -241,66 +273,33 @@ form
 
 }
 
-.media-options a
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.media-options a:hover
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.provider a:hover{
     text-decoration: none;
 }
 
-a.facebook
-{
-    color: #fff;
-    background-color: #4267b2;
-    text-decoration: none;
+.provider button{
+    border: 0px;
 }
 
-a.facebook span
-{
-    font-size: 18px;
-    font-weight: 500;
-}
-
-a.google
-{
-    border: 1px solid #d4d4d4;
-}
-
-a.google span
-{
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500;
-    opacity: 0.6;
-    color: #232836;
-}
-
-.g-icon
-{
+.icons{
     position: absolute;
-    top: 35%;
-    left: 35px;
-    color: #232836;
-    transform: translate(-50%);
-
+    left: 20px;
+    color: #ffffff;
 }
 
-.fb-icon
-{
-    position: absolute;
-    top: 35%;
-    left: 35px;
-    transform: translate(-50%);
-
+.provider button a span{
+    color: #ffffff;
+    font-size: 18px;
 }
+
+.facebook{
+    background-color:#4267B2;
+}
+
+.google{
+    background-color:#DB4437;
+}
+
 
 @media screen and (max-width: 400px)
 {

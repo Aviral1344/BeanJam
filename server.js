@@ -2,7 +2,9 @@
 const express = require("express");
 var bodyParser = require("body-parser")
 const mongoose = require("mongoose")
+
 const app= express();
+
 
 const uri="mongodb+srv://aviral_1344:beanjam2023@beanjam.dcogep7.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(uri);
@@ -23,10 +25,10 @@ app.use(bodyParser.json())
 
 app.get("/",(req,res) =>{
     res.render("home.ejs")
-}) 
+})
 
 app.get("/login",(req, res) =>{
-    res.render("login.ejs")
+    res.render("login.ejs", {msg: null})
 })
 
 app.get("/index",(req, res) =>{
@@ -34,35 +36,44 @@ app.get("/index",(req, res) =>{
 })
 
 app.post("/login",async (req, res) =>{
-    var email= req.body.emailL;
+    var data= req.body.entry;
     var password= req.body.passwordL;
 
     try{
-        const user= await dbs.collection("users").findOne({"email": email});
-        console.log(user);
-        if(user.password == password){
-            return res.redirect("/index")
+        const user1= await dbs.collection("users").findOne({"email": data});
+        const user2= await dbs.collection("users").findOne({"username": data});
+        console.log(user1);
+        console.log(user2);
+
+        if(user1.password == password || user2.password == password){
+            res.redirect("/index")
         }
         else{
-            res.send("Incorrect Password")
+            res.render("login.ejs")
         }
     }
     catch{
-        res.send("Incorrect credentials")
+        res.render("login.ejs")
     }
 })
 
 app.get("/signup",(req, res) =>{
-    res.render("signup.ejs",{signup:"signup.ejs"})
+    res.render("signup.ejs")
 })
+
+app.get('/display-message', (req, res) => {
+    res.send(req.flash('message'));
+});
 
 app.post("/signup",(req,res) =>{
     var name= req.body.full_name;
+    var username=req.body.user_name;
     var email= req.body.email;
     var password= req.body.password;
 
     var data= {
         "name": name,
+        "username": username,
         "email": email,
         "password": password
     };
