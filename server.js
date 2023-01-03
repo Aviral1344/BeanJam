@@ -44,12 +44,8 @@ app.post("/login",async (req, res) =>{
         const user2= await dbs.collection("users").findOne({"username": data});
         console.log(user1);
         console.log(user2);
-
         if(user1.password == password || user2.password == password){
             res.redirect("/index")
-        }
-        else{
-            res.render("login.ejs")
         }
     }
     catch{
