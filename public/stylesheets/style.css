@@ -6,17 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     list-style: none;
-}
-
-.transition-fade
-{
-    opacity: 1;
-    transition: 1s;
-}
-
-html.is-animating .transition-fade
-{
-    opacity: 0;
+    background-size: cover;
 }
 
 .navbar
@@ -27,11 +17,10 @@ html.is-animating .transition-fade
     justify-content: flex-end;
     align-items: center;
     padding: 10px 4%;
-    background-color: #24252a;
 }
 
 .navbar h1{
-    color: #0088a9;
+    color: #ffffff;
     cursor: pointer;
     margin-right: auto;
 }
@@ -46,15 +35,16 @@ html.is-animating .transition-fade
 
 .navbar button{
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid seashell;
     cursor: pointer;
     transition: all 0.4s ease;
     border-radius: 10px;
 }
 
 .navbar button:hover{
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
 }
 
 .nav_links
@@ -73,7 +63,7 @@ html.is-animating .transition-fade
 }
 
 .nav_links li a:hover{
-    color: #0088a9;
+    font-size: 17px;
 }
 
 .container
@@ -83,23 +73,9 @@ html.is-animating .transition-fade
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #24252a;
+    background-image: url("/images/bg4.jpg");
+    background-size: cover;
 }
-
-.homelogo
-{
-    position: absolute;
-    top: 110px;
-    left: 450px;
-}
-
-.logo
-{
-    position: absolute;
-    top: 110px;
-    left: 150px;
-}
-
 
 .form
 {
@@ -110,27 +86,9 @@ html.is-animating .transition-fade
     padding: 20px;
     margin-top: 50px;
     border-radius: 10px;
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-
-.form.signup
-{
-    opacity: 0;
-    pointer-events: none;
-}
-
-.forms.show-signup .form.signup
-{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.forms.show-signup .form.login
-{
-    opacity: 0;
-    pointer-events: none;
-}
 header
 {
     font-size: 30px;
@@ -159,16 +117,17 @@ form
     outline: none;
     height: 100%;
     width : 100%;
-    border: 1px solid #cacaca;
+    border: 0px;
     padding: 15px;
     font-size: 18px;
     font-weight: 400;
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.225);
 }
 
-.field input:focus
+.field input::content
 {
-    border-bottom-width: 3px;
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 .eye-icon
@@ -177,19 +136,19 @@ form
     top: 34%;
     right: 4%;
     font-size: 18px;
-    color: #8b8b8b;
+    color: rgba(255, 254, 254, 0.893);
     cursor: pointer;
 }
 
 .field button
 {
-    background-color: #24252a;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0);
     color: white;
     height: 100%;
     width : 100%;
     font-size: 18px;
     font-weight: 500;
-    border: 0px;
     border-radius: 10px;
     transition: all 0.4s ease;
     cursor: pointer;
@@ -197,13 +156,15 @@ form
 
 .field button:hover
 {
-    color: #ffffff;
-    background-color: #0088a9;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
 }
 
 .form-link0{
     position: absolute;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .form-link
@@ -211,10 +172,11 @@ form
     position: absolute;
     bottom: 190px;
     align-items: center;
+    margin-left: 10px;
     margin-top: 10px;
     font-size: 14px;
-    font-weight: 400;
-    color: #0088a9;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.665);
     
 }
 
@@ -230,7 +192,7 @@ form
  
 .form a
 {
-    color: #0171d3;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -247,31 +209,17 @@ form
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 10px;
-    bottom: 10px;
+    bottom: 20px;
 }
 
-.line
-{
-    position: relative;
-    height: 1px;
-    width: 100%;
-    margin: 20px 0;
-    margin-bottom: 20px;
-    background-color: #d4d4d4;
+.or p{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    
 }
 
-.line::before
-{
-    content: "Or";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    color: #232836;
-    padding: 0 15px;
-
-}
 
 .provider a:hover{
     text-decoration: none;
@@ -301,11 +249,5 @@ form
 }
 
 
-@media screen and (max-width: 400px)
-{
-    .form
-    {
-        padding: 15px 10px;
-    }
-}
+
 
